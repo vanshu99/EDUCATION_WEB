@@ -1,0 +1,35 @@
+{% extends 'facultydefault.html' %}
+
+{% block content %}
+<div class="tm-right-column">
+          <div class="tm-content-div">
+ <!-- Contact Us section -->
+ <section id="contact" class="tm-section">
+     <header>
+         <h2 class="tm-blue-text tm-section-title tm-margin-b-30">
+   Give Your Answers !</h2>
+ </header>
+            <hr>
+     <div class="row">
+         <div class="col-lg-12">
+          <h2>Questions List</h2>
+
+          <table class='table'>
+                <tr class='active'>
+                    <th>Student Name</th>
+                    <th>Question</th>
+                    <th>When</th>
+                </tr>
+                {% for qus in questions %}
+                    <tr'>
+                        <th>{{qus.3}}</th>
+                        <th>{{qus.1}}</th>
+                        <th>{{qus.2}}</th>
+                    </tr>
+                {% endfor %}
+          </table>
+         </div>      
+     </div>
+     
+ </section>
+{% endblock %}
